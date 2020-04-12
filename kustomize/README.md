@@ -48,6 +48,7 @@ The default entrypoint will automatically apply your build via `kubectl apply -f
     - 'CLOUDSDK_COMPUTE_ZONE=us-west1'
     - 'CLOUDSDK_CONTAINER_CLUSTER=tf-k8s'
     - 'GCLOUD_PROJECT=compound-dev'
+    - 'KUSTOMIZE_PATH=/builder/kustomize.bash'
 ```
 
 To apply the build yourself, you can use a custom entrypoint, e.g.
