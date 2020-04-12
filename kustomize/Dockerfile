@@ -6,7 +6,7 @@ ENV VERSION v${VER}
 COPY kustomize.bash /builder/kustomize.bash
 
 RUN apt-get update && \
-    apt-get install -y wget && \
+    apt-get install -y wget ca-certificates curl wget build-essential && \
     wget https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2F${VERSION}/kustomize_${VERSION}_linux_amd64.tar.gz && \
     tar xvzf kustomize_${VERSION}_linux_amd64.tar.gz && \
     mkdir /builder/kustomize && \

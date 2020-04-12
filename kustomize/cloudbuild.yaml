@@ -5,6 +5,10 @@ steps:
   name: 'gcr.io/$PROJECT_ID/kustomize'
   entrypoint: 'kustomize'
   args: ['version']
+- # Verify make exists been built correctly
+  name: 'gcr.io/$PROJECT_ID/kustomize'
+  entrypoint: 'make'
+  args: ['-h']
 
 images: ['gcr.io/$PROJECT_ID/kustomize']
 tags: ['cloud-builders-community']
